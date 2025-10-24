@@ -1,10 +1,605 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>🏡 Wirral home for sale</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnes Green, Spital | A Refined Family Home</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display for headings, Lato for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-hague-blue: #30435D;
+            --color-off-black: #222222;
+            --color-strong-white: #F8F8F5;
+            --color-skimming-stone: #D3D1CB;
+            --color-elephants-breath: #7A7470;
+            --color-spoiled-rotten-:#B1BEE6
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-off-black);
+            background-color: var(--color-strong-white);
+            line-height: 1.65; /* Increased line height for premium feel */
+            letter-spacing: 0.02em; /* Subtle letter spacing */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-spoiled-rotten);
+            font-weight: 600; /* Medium bold for headings */
+            font-variant-ligatures: common-ligatures;
+        }
+
+        /* Custom utility classes for colors */
+        .text-hague-blue { color: var(--color-hague-blue); }
+        .bg-hague-blue { background-color: var(--color-hague-blue); }
+        .border-hague-blue { border-color: var(--color-hague-blue); }
+        .text-off-black { color: var(--color-off-black); }
+        .bg-strong-white { background-color: var(--color-strong-white); }
+        .text-skimming-stone { color: var(--color-skimming-stone); }
+        .text-elephants-breath { color: var(--color-elephants-breath); }
+        .text-spoiled-rotten{ color: var(--color-spoiled-rotten); }
+
+        /* Button hover for Hague Blue */
+        .hover\:bg-hague-blue-dark:hover {
+            background-color: #263649; /* Slightly darker Hague Blue */
+        }
+        .hover\:border-hague-blue-dark:hover {
+            border-color: #263649;
+        }
+
+        /* Active nav link style - more subtle and integrated */
+        .nav-link.active {
+            color: var(--color-hague-blue);
+            font-weight: 700;
+        }
+        .nav-link.active::after {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 2px;
+            background-color: var(--color-hague-blue);
+            margin: 4px auto 0;
+        }
+
+        /* Mobile menu specific active style */
+        .mobile-link.active {
+            background-color: var(--color-skimming-stone);
+            color: var(--color-hague-blue);
+            border-radius: 0.375rem; /* rounded-md */
+        }
+        .mobile-link.active::after {
+            display: none; /* Hide underline on mobile active */
+        }
+        
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Text shadow for hero overlay */
+        .text-shadow-lg {
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* Custom icon styling for premium look */
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem; /* h-16 w-16 */
+            height: 4rem;
+            border-radius: 9999px; /* rounded-full */
+            background-color: var(--color-skimming-stone); /* Subtle background */
+            margin: 0 auto 1rem;
+        }
+        .icon-container svg {
+            color: var(--color-hague-blue);
+            width: 2.5rem; /* h-10 w-10 */
+            height: 2.5rem;
+        }
+
+        /* Image gallery styling */
+        .gallery-image {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        }
+
+        /* Map styling */
+        .map-frame {
+            border: 4px solid var(--color-skimming-stone);
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+
+    </style>
 </head>
-<body>
-  <h1>🏡</h1>
+<body class="bg-strong-white antialiased">
+
+    <!-- HEADER & NAVIGATION -->
+    <nav class="bg-strong-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20"> 
+                <!-- Increased height for a grander feel -->
+                <!-- Logo / Site Title -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-playfair-display font-bold text-hague-blue hover:text-hague-blue-dark">Barnes Green</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:space-x-10"> 
+                    <!-- Increased spacing -->
+                    <a href="#home" class="nav-link text-off-black hover:text-hague-blue px-1 py-2 text-base font-medium active">Home</a>
+                    <a href="#the-home" class="nav-link text-off-black hover:text-hague-blue px-1 py-2 text-base font-medium">The Home</a>
+                    <a href="#location" class="nav-link text-off-black hover:text-hague-blue px-1 py-2 text-base font-medium">Location & Lifestyle</a>
+                    <a href="#schools" class="nav-link text-off-black hover:text-hague-blue px-1 py-2 text-base font-medium">Schools</a>
+                    <a href="#contact" class="nav-link-btn bg-hague-blue text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-hague-blue-dark shadow-md transition duration-300">
+                        Arrange Viewing
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-off-black hover:text-hague-blue hover:bg-skimming-stone focus:outline-none focus:ring-2 focus:ring-inset focus:ring-hague-blue">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon for menu (bars) -->
+                        <svg id="menu-icon-open" class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Icon for close (X) -->
+                        <svg id="menu-icon-close" class="hidden h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu, toggled by JS -->
+        <div id="mobile-menu" class="md:hidden hidden border-t border-skimming-stone py-2">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="nav-link mobile-link block px-3 py-2 text-base font-medium text-off-black hover:text-hague-blue hover:bg-skimming-stone active">Home</a>
+                <a href="#the-home" class="nav-link mobile-link block px-3 py-2 text-base font-medium text-off-black hover:text-hague-blue hover:bg-skimming-stone">The Home</a>
+                <a href="#location" class="nav-link mobile-link block px-3 py-2 text-base font-medium text-off-black hover:text-hague-blue hover:bg-skimming-stone">Location & Lifestyle</a>
+                <a href="#schools" class="nav-link mobile-link block px-3 py-2 text-base font-medium text-off-black hover:text-hague-blue hover:bg-skimming-stone">Schools</a>
+                <a href="#contact" class="nav-link mobile-link block px-3 py-2 text-base font-medium text-off-black hover:text-hague-blue hover:bg-skimming-stone">Arrange Viewing</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    
+        <!-- HOME SECTION -->
+        <section id="home" class="relative pt-24 pb-16 md:pt-32 md:pb-24 bg-strong-white overflow-hidden">
+            <div class="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
+                <img 
+                    src="https://assets.reapit.net/vmn/live/pictures/PRE/24/PRE240712_25.jpg" 
+                    onerror="this.src='https://placehold.co/1920x1080/30435D/F8F8F5?text=Welcome+to+Barnes+Green'"
+                    alt="Elegant front exterior of the Barnes Green family home in Spital" 
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-black/20 flex flex-col justify-end p-8 md:p-16 text-white">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair-display font-bold leading-tight text-shadow-lg max-w-4xl">
+                        A Sanctuary of Space & Connectivity.
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl lg:text-2xl max-w-3xl text-shadow-lg">
+                        Discover Barnes Green – a refined family home offering an unparalleled lifestyle in Spital, perfectly positioned for the discerning professional family.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-hague-blue text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-hague-blue-dark shadow-xl transition duration-300">
+                            Arrange Your Private Viewing
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-playfair-display font-bold text-hague-blue mb-8">
+                        Barnes Green: Where Family Life Flourishes.
+                    </h2>
+                    <p class="text-lg text-off-black leading-relaxed mb-6">
+                        Nestled in the desirable heart of Spital, CH63, this exceptional 4/5 bedroom detached residence is more than just a house; it’s a lifestyle choice. Designed for the modern family that values both dynamic careers and precious home life, Barnes Green offers generous living spaces, remarkable energy efficiency, and effortless access to the best of the Wirral, Liverpool, and Chester.
+                    </p>
+                    <p class="text-lg text-off-black leading-relaxed">
+                        Every detail has been curated to support a seamless, comfortable, and sustainable family life.
+                    </p>
+                </div>
+
+                <!-- Key Attributes as an elegant grid -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div class="text-center">
+                        <div class="icon-container">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M8.25 21h7.5M12 3v18" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-playfair-display font-semibold text-off-black">Flexible Living Spaces</h3>
+                        <p class="text-gray-700 text-sm">4/5 bedrooms, including a versatile ground-floor suite for office or guests.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="icon-container">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-playfair-display font-semibold text-off-black">Effortless Connectivity</h3>
+                        <p class="text-gray-700 text-sm">A short walk to Spital Station, connecting you to Liverpool and Chester in minutes.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="icon-container">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-playfair-display font-semibold text-off-black">Outstanding Education</h3>
+                        <p class="text-gray-700 text-sm">Steps away from an 'Outstanding' primary school, within renowned grammar catchments.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="icon-container">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-playfair-display font-semibold text-off-black">Sustainable Living</h3>
+                        <p class="text-gray-700 text-sm">Eco-conscious features: solar panels, heat pump, and battery storage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- THE HOME SECTION -->
+        <section id="the-home" class="py-16 md:py-24 bg-skimming-stone">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-playfair-display font-bold text-center text-off-black mb-12">
+                    A Refined Abode for Family Life.
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <img 
+                            src="https://assets.reapit.net/vmn/live/pictures/PRE/24/PRE240712_11.jpg" 
+                            onerror="this.src='https://placehold.co/800x600/7A7470/F8F8F5?text=Spacious+Family+Kitchen'"
+                            alt="Modern fitted kitchen diner, the heart of the home" 
+                            class="rounded-xl shadow-lg w-full h-auto object-cover object-center gallery-image"
+                        >
+                    </div>
+                    <div class="max-w-xl">
+                        <h3 class="text-3xl font-playfair-display font-semibold text-hague-blue">The Heart of the Home: A Space to Connect</h3>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            The ground floor unveils a beautifully designed, open-plan flow. A contemporary fitted kitchen seamlessly transitions into a welcoming snug area, and beyond, a dedicated formal dining room. This creates a natural hub for everyday family moments – from lively dinners to quiet evenings and children’s homework sessions.
+                        </p>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            A separate, generously proportioned lounge at the rear offers a tranquil escape, perfect for unwinding after a busy day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center mt-16 md:mt-24">
+                    <div class="order-2 md:order-1 max-w-xl">
+                        <h3 class="text-3xl font-playfair-display font-semibold text-hague-blue">Versatility for Modern Lifestyles</h3>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            A truly adaptable home, Barnes Green features a remarkable **ground-floor fifth bedroom with its own en-suite bathroom**. This invaluable space offers endless possibilities: a private guest suite, a dedicated playroom for the children, or a serene home office for the discerning professional seeking focus and tranquility.
+                        </p>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            Upstairs, four further well-appointed bedrooms provide comfort and privacy for the entire family.
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img 
+                            src="https://assets.reapit.net/vmn/live/pictures/PRE/24/PRE240712_14.jpg" 
+                            onerror="this.src='https://placehold.co/800x600/7A7470/F8F8F5?text=Versatile+Home+Office'"
+                            alt="Versatile ground floor room, ideal for home office or guest suite" 
+                            class="rounded-xl shadow-lg w-full h-auto object-cover object-center gallery-image"
+                        >
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center mt-16 md:mt-24">
+                    <div>
+                        <img 
+                            src="https://assets.reapit.net/vmn/live/pictures/PRE/24/PRE240712_24.jpg" 
+                            onerror="this.src='https://placehold.co/800x600/7A7470/F8F8F5?text=Private+Family+Garden'"
+                            alt="Private rear garden with space for family recreation" 
+                            class="rounded-xl shadow-lg w-full h-auto object-cover object-center gallery-image"
+                        >
+                    </div>
+                    <div class="max-w-xl">
+                        <h3 class="text-3xl font-playfair-display font-semibold text-hague-blue">Sustainable Comfort & Outdoor Enjoyment</h3>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            Barnes Green champions sustainable living with its thoughtful integration of solar panels, two battery storage units, and a Grant heat pump. These features not only significantly reduce utility costs but also underscore a commitment to a greener future.
+                        </p>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            Outside, a beautifully enclosed, private rear garden offers a serene backdrop for cherished family moments – from summer barbecues to children's play. Ample driveway parking further enhances the practicality of this exceptional home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="https://assets.reapit.net/vmn/live/pictures/PRE/24/PRE240712_27.jpg" target="_blank" class="inline-block bg-hague-blue text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-hague-blue-dark shadow-xl transition duration-300">
+                        View Detailed Floorplan
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LOCATION & LIFESTYLE SECTION -->
+        <section id="location" class="py-16 md:py-24 bg-strong-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl md:text-5xl font-playfair-display font-bold text-center text-off-black mb-12">
+                    Effortless Living: Connectivity & Cultured Leisure.
+                </h2>
+                <p class="text-lg text-off-black leading-relaxed max-w-4xl mx-auto text-center mb-12">
+                    Barnes Green offers the coveted "Wirral commuter's dream"—a peaceful family haven with direct access to dynamic city careers and an abundance of high-quality leisure options.
+                </p>
+                
+                <div class="rounded-xl shadow-xl overflow-hidden map-frame mb-16">
+                    <iframe 
+                        src="https://www.google.com/maps?q=CH63+9LU&hl=en&z=13&output=embed" 
+                        class="w-full h-96 md:h-[600px] border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map showing CH63 9LU area"
+                    ></iframe>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Connectivity -->
+                    <div class="bg-strong-white p-8 rounded-xl shadow-lg border border-skimming-stone">
+                        <div class="icon-container-small flex items-center mb-4">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h.008M9.75 18.75h-.008m-3.75 0h.008m12.75 0h.008M9.75 18.75h3.75M4.5 14.25l6-6h3l6 6M12 3v6.75" /></svg>
+                            <h3 class="ml-4 text-2xl font-playfair-display font-semibold text-off-black">Seamless Commutes</h3>
+                        </div>
+                        <p class="text-off-black leading-relaxed">
+                            For professionals working in Liverpool or Chester, Spital Station is a revelation. A short walk from your door, it offers fast, reliable Merseyrail services, transforming your daily commute into a stress-free journey.
+                        </p>
+                        <ul class="mt-4 list-disc list-inside text-off-black space-y-1">
+                            <li><span class="font-semibold">Liverpool Lime Street:</span> ~22 minutes</li>
+                            <li><span class="font-semibold">Chester City Centre:</span> ~25 minutes</li>
+                            <li><span class="font-semibold">M53 Motorway:</span> 5 minutes</li>
+                            <li><span class="font-semibold">Clatterbridge Hospital:</span> 5-10 minutes</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Cultured Leisure -->
+                    <div class="bg-strong-white p-8 rounded-xl shadow-lg border border-skimming-stone">
+                        <div class="icon-container-small flex items-center mb-4">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21.75c-3.75 0-7.5-1.68-9.75-4.943v.402c0 2.224 1.555 4.135 3.714 4.607 1.886.393 3.905.183 5.851-.623m-9.75-4.943c-.859-2.302-1.282-4.876-1.282-7.464S3.69 4.39 4.55 2.088m9.75 15.688v-7.386c0-1.78-.96-3.417-2.484-4.264M15.75 12h-3M4.55 2.088c.86-2.301 3.203-3.955 5.86-3.955 2.656 0 5.002 1.654 5.86 3.955M18.75 12c.86-2.302 1.282-4.876 1.282-7.464S20.31 4.39 19.45 2.088m-9.75 15.688V8.406c0-1.78.96-3.417 2.484-4.264m3-4.148c.859-2.302 1.282-4.876 1.282-7.464S20.31 4.39 19.45 2.088m-9.75 15.688V8.406c0-1.78.96-3.417 2.484-4.264m3-4.148c.859-2.302 1.282-4.876 1.282-7.464S20.31 4.39 19.45 2.088M12 21.75v-7.386c0-1.78-.96-3.417-2.484-4.264M15.75 12h-3" /></svg>
+                            <h3 class="ml-4 text-2xl font-playfair-display font-semibold text-off-black">Cultured Leisure</h3>
+                        </div>
+                        <p class="text-off-black leading-relaxed">
+                            Indulge in the vibrant cultural scenes of Liverpool and Chester. Enjoy world-class dining, theatres, and museums just a short train ride away, perfect for sophisticated evenings out or enriching family days.
+                        </p>
+                        <ul class="mt-4 list-disc list-inside text-off-black space-y-1">
+                            <li><span class="font-semibold">Fine Dining:</span> Liverpool's Albert Dock, Chester's city centre.</li>
+                            <li><span class="font-semibold">Arts & Culture:</span> Tate Liverpool, World Museum, Storyhouse Chester.</li>
+                            <li><span class="font-semibold">Local Gems:</span> Lady Lever Art Gallery, Port Sunlight Village.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Outdoor Pursuits -->
+                    <div class="bg-strong-white p-8 rounded-xl shadow-lg border border-skimming-stone">
+                        <div class="icon-container-small flex items-center mb-4">
+                            <svg class="w-10 h-10 text-hague-blue" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6.75l-3 3v2.25l3 3m-8.625-7.5l-3 3m3 3L11.25 18l-3-3" /></svg>
+                            <h3 class="ml-4 text-2xl font-playfair-display font-semibold text-off-black">Tranquil Outdoors</h3>
+                        </div>
+                        <p class="text-off-black leading-relaxed">
+                            The Wirral Peninsula is renowned for its natural beauty. Enjoy family days out at the award-winning Chester Zoo, explore scenic beaches, or unwind with a round of golf at one of the area's prestigious courses.
+                        </p>
+                        <ul class="mt-4 list-disc list-inside text-off-black space-y-1">
+                            <li><span class="font-semibold">Family Fun:</span> Chester Zoo (20 min drive).</li>
+                            <li><span class="font-semibold">Coastal Walks:</span> Thurstaston, West Kirby, Parkgate.</li>
+                            <li><span class="font-semibold">Green Spaces:</span> Wirral Country Park, Royden Park.</li>
+                            <li><span class="font-semibold">Golf:</span> Multiple local clubs, including Royal Liverpool.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SCHOOLS & COMMUNITY SECTION -->
+        <section id="schools" class="py-16 md:py-24 bg-skimming-stone">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="max-w-xl">
+                        <h2 class="text-4xl md:text-5xl font-playfair-display font-bold text-off-black">
+                            A Foundation for Future Success.
+                        </h2>
+                        <p class="mt-4 text-lg text-off-black leading-relaxed">
+                            For any family, the quality of local education is paramount. Barnes Green is enviably situated within the catchment of some of the Wirral's most highly-regarded institutions, offering an exceptional start for your children.
+                        </p>
+                        
+                        <h3 class="mt-8 text-3xl font-playfair-display font-semibold text-hague-blue">Primary Education</h3>
+                        <p class="mt-4 text-off-black leading-relaxed">
+                            **Poulton Lancelyn Primary School**<br>
+                            **Distance:** A remarkable 200 yards (a gentle 2-minute stroll)<br>
+                            This 'Outstanding' rated primary school offers an exceptional learning environment, making the school run effortless and enriching.
+                        </p>
+                        
+                        <h3 class="mt-8 text-3xl font-playfair-display font-semibold text-hague-blue">Secondary & Grammar Excellence</h3>
+                        <p class="mt-4 text-off-black leading-relaxed">
+                            The property's location provides prime access to the Wirral's renowned selective secondary schools, offering unparalleled academic opportunities.
+                        </p>
+                        <ul class="mt-3 list-disc list-inside text-off-black space-y-1 ml-4">
+                            <li>Wirral Grammar School for Boys (Approx. 1 mile)</li>
+                            <li>Wirral Grammar School for Girls (Approx. 1 mile)</li>
+                            <li>St. John Plessington Catholic College</li>
+                            <li>Co-op Academy Bebington</li>
+                        </ul>
+                        <p class="mt-8 text-sm text-elephants-breath italic">
+                            Prospective buyers are advised to verify current school catchment areas and admissions policies directly with the local authority, as these can be subject to change.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 md:mt-0">
+                        <img 
+                            src="https://placehold.co/800x600/D3D1CB/30435D?text=Inspiring+Education+Environment" 
+                            alt="Image representing inspiring education and community" 
+                            class="rounded-xl shadow-lg w-full h-auto object-cover object-center gallery-image"
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & VIEWING SECTION -->
+        <section id="contact" class="py-16 md:py-24 bg-strong-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl mx-auto bg-skimming-stone p-8 md:p-12 rounded-xl shadow-xl border border-skimming-stone">
+                    <h2 class="text-4xl md:text-5xl font-playfair-display font-bold text-center text-hague-blue mb-8">
+                        Experience Barnes Green.
+                    </h2>
+                    <p class="mt-4 text-lg text-off-black leading-relaxed text-center mb-8">
+                        We invite you to discover the charm and convenience of Barnes Green for yourself. To arrange a private viewing or for more detailed enquiries, please contact our dedicated agents, BFL Homes.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-hague-blue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18h18M4.5 21V3m15 18V3m-13.5 18v-9m12 9v-9m-9-9h.008v.008H7.5V6H7.5V6z" /></svg>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-playfair-display font-semibold text-off-black">Property Represented By</h3>
+                                <p class="text-off-black">BFL Homes, East Wirral Branch</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-hague-blue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.211-.998-.552-1.33l-2.163-2.163a1.125 1.125 0 00-1.59 0l-1.06 1.06c-1.272 1.272-3.63 1.06-5.132-.44-1.502-1.502-1.712-3.86-.44-5.132l1.06-1.06a1.125 1.125 0 000-1.59L9.12 3.552A2.25 2.25 0 007.788 3H6.416A2.25 2.25 0 004.166 5.25v1.5z" /></svg>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-playfair-display font-semibold text-off-black">Speak With An Agent</h3>
+                                <a href="tel:0151-608-9595" class="text-off-black hover:text-hague-blue text-lg">0151 608 9595</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-hague-blue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-playfair-display font-semibold text-off-black">Email Enquiries</h3>
+                                <a href="mailto:prenton@bflhomes.com" class="text-off-black hover:text-hague-blue text-lg">[email protected]</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="w-7 h-7 text-hague-blue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-playfair-display font-semibold text-off-black">Office Address</h3>
+                                <p class="text-off-black">357 Woodchurch Road, Prenton, Wirral, CH42 8PE</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center">
+                        <a href="https://www.bflhomes.com/Property-Details?property_reference=PRE240712" target="_blank" class="inline-block bg-hague-blue text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-hague-blue-dark shadow-xl transition duration-300">
+                            View Original Listing on BFLHomes.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="bg-hague-blue text-strong-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+            <p class="text-sm font-light leading-relaxed">&copy; 2025 Barnes Green, Spital. All property details provided by BFL Homes. This website serves as a refined showcase and is not a formal listing.</p>
+            <p class="text-xs mt-2 font-light">Inspired by the timeless palette of Farrow & Ball.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+            
+            // --- Navigation Link Click Handler ---
+            function handleNavLinkClick(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Get section ID from href
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Scroll to the target section
+                    window.scrollTo({
+                        top: targetSection.offsetTop - (window.innerWidth < 768 ? 80 : 80), // Adjust for sticky header height
+                        behavior: 'smooth'
+                    });
+
+                    // Update active class for nav links
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.classList.contains('mobile-link')) {
+                            link.classList.remove('bg-skimming-stone', 'text-hague-blue');
+                        }
+                    });
+                    this.classList.add('active');
+                    if (this.classList.contains('mobile-link')) {
+                        this.classList.add('bg-skimming-stone', 'text-hague-blue');
+                    }
+
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIconOpen.classList.remove('hidden');
+                        menuIconClose.classList.add('hidden');
+                    }
+                }
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', handleNavLinkClick);
+            });
+
+            // Handle nav-link-btn clicks (like "Arrange Viewing" button)
+            document.querySelectorAll('.nav-link-btn').forEach(btn => {
+                btn.addEventListener('click', handleNavLinkClick);
+            });
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            });
+
+            // --- Scrollspy for Active Nav Links ---
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - (window.innerWidth < 768 ? 90 : 90); // Adjust for header height
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.classList.contains('mobile-link')) {
+                        link.classList.remove('bg-skimming-stone', 'text-hague-blue');
+                    }
+
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                        if (link.classList.contains('mobile-link')) {
+                            link.classList.add('bg-skimming-stone', 'text-hague-blue');
+                        }
+                    }
+                });
+            });
+
+            // Set initial active link for the home section on load
+            const initialHomeLink = document.querySelector('.nav-link[href="#home"]');
+            if (initialHomeLink) {
+                initialHomeLink.classList.add('active');
+            }
+        });
+    </script>
+
 </body>
 </html>
